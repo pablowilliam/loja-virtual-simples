@@ -2,31 +2,37 @@
 
 require 'database.php';
 
+  $produtos = DBRead('produto');
 
-/*
-echo "<div class='card' style='width: 18rem;'>";
-echo "<img class='card-img-top' src='resource/img/camiseta.jpg' alt='Card image cap'>";
-echo "<div class='card-body'>";
-echo "<!--Título do produto-->";
-echo "<h5 class='card-title'> Camiseta Off-line </h5>
-  <!-- Descrição do produto -->
-  <p class='card-text'> Camiseta Off-line preta, personalizada com dinossauro </p>
-</div>
-<ul class='list-group list-group-flush'>
-  <!-- Preço do produto -->
-  <li class='list-group-item'> R$ 49,90</li>
-</ul>
-<div class='card-body'>
-  <button type='button' class='btn btn-outline-info'>Comprar</button>
-  <button type='button' class='btn btn-outline-success'>Detalhes</button>
-</div>
-</div> "; */
+  //foreach($categorias as $key => $values){
+  //  echo $values['catnome'];
+  //}
 
-  $categorias = DBRead('categoria',null,'catnome');
+  var_dump($produtos);
 
-  foreach($categorias as $key => $values){
-    echo $values['catnome'];
+  foreach($produtos as $key=>$values) {
+    echo "<div class='card' style='width: 18rem;'>
+    <img class='card-img-top' src='resource/img/camiseta.jpg' alt='{$values['pronome']}'>
+    <div class='card-body'>
+      <h5 class='card-title'>{$values['pronome']}</h5>
+      <p class='card-text'>{$values['prodescricao']}</p>
+    </div>
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item'>{$values['propreco']}</li>
+    </ul>
+    <div class='card-body'>
+      <a href='#' class='btn btn-outline-success'>Comprar</a>
+      <a href='#' class='btn btn-outline-info'>Detalhes</a>
+    </div>
+  </div>";
   }
+
+  
+
+
+
+
+
 
 
 ?>
