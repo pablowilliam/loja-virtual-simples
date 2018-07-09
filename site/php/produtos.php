@@ -22,26 +22,11 @@ echo "<h5 class='card-title'> Camiseta Off-line </h5>
 </div>
 </div> "; */
 
-//$query = "INSERT INTO produto(pronome) VALUES ('Guitarra') ";
-//DBExecute($query);
+  $categorias = DBRead('categoria',null,'catnome');
 
-// $data = [
-//   'catnome' => 'Action Figures'
-// ];
+  foreach($categorias as $key => $values){
+    echo $values['catnome'];
+  }
 
-//$ok = DBUpdate('categoria',$data,'catid=4');
 
-//echo ($ok) ? 'alterado com sucesso' : 'erro ao alterar';
-
-// $produto = array(
-//   'pronome'  => 'Livro 2',
-//   'propreco' => '29.90',
-//   'prodescricao' => 'Livrinho novo',
-//   'procategoria' => 3
-// );
-
-//$grava = DBCreate('produto',$produto);
-
-//$deletado = DBDelete('categoria','catid = 4');
-
-//echo ($deletado) ? 'Deletado com sucesso' : 'Erro ao deletar registro';
+?>

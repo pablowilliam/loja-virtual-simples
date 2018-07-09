@@ -39,13 +39,9 @@ Seu código fonte é aberto e livre para ser alterado!
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu
+                    Categorias
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Ação</a>
-                    <a class="dropdown-item" href="#">Outra ação</a>
-                    <a class="dropdown-item" href="#">Algo a mais aqui...</a>
-                  </div>
+                  <div id="catdiv" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"></div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="#" title="Contate-nos">Contato</a>
@@ -92,7 +88,7 @@ Seu código fonte é aberto e livre para ser alterado!
         </div>
         <br>
         <!-- Produtos aqui -->
-        
+
         <!-- Div que carrega conteudo php com ajax -->
         <br>
         <div id="conteudo_mostrar"></div>
@@ -153,15 +149,16 @@ Seu código fonte é aberto e livre para ser alterado!
 
   <!-- Imports para bootstrap -->
 
-  <script src="js/jquery.js"></script> 
+  <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
   <!-- testando scripts -->
   <script>
     $(document).ready(function () {
-      
+
       $("#conteudo_mostrar").load("php/produtos.php");
-      
+      $("#catdiv").load("php/categorias.php");
+
     });
 
   </script>
