@@ -3,11 +3,6 @@
 require 'database.php';
 
   $produtos = DBRead('produto');
-
-  //foreach($categorias as $key => $values){
-  //  echo $values['catnome'];
-  //}
-
   var_dump($produtos);
 
   foreach($produtos as $key=>$values) {
