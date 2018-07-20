@@ -2,10 +2,11 @@
 
 require 'database.php';
 
+  //$produtos = DBRead('produto','where proid = 2','*');
   $produtos = DBRead('produto');
-  var_dump($produtos);
 
   foreach($produtos as $key=>$values) {
+
     echo "<div class='card' style='width: 18rem;'>
     <img class='card-img-top' src='resource/img/camiseta.jpg' alt='{$values['pronome']}'>
     <div class='card-body'>
@@ -20,14 +21,8 @@ require 'database.php';
       <a href='#' class='btn btn-outline-info'>Detalhes</a>
     </div>
   </div>";
-  }
-
   
-
-
-
-
-
+  }
 
 
 ?>

@@ -16,7 +16,7 @@
 
     //ler registros do banco
     function DBRead($table,$params=null,$fields='*'){
-        $query = "select {$fields} from {$table}{$params}";
+        $query = "select {$fields} from {$table} {$params}";
         $result = DBExecute($query);
         if(!mysqli_num_rows($result)){
             return 'false';
